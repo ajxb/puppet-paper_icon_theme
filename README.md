@@ -1,11 +1,11 @@
-paper# paper_icon_theme
+# paper_icon_theme
 
-#### Table of Contents
+## Table of Contents
 
 1. [Description](#description)
 1. [Setup - The basics of getting started with paper_icon_theme](#setup)
-    * [What paper_icon_theme affects](#what-paper_icon_theme-affects)
-    * [Beginning with paper_icon_theme](#beginning-with-paper_icon_theme)
+  * [What paper_icon_theme affects](#what-paper_icon_theme-affects)
+  * [Beginning with paper_icon_theme](#beginning-with-paper_icon_theme)
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Limitations - OS compatibility, etc.](#limitations)
@@ -13,7 +13,7 @@ paper# paper_icon_theme
 
 ## Description
 
-The paper_icon_theme module installs the [Paper icon theme](https://snwh.org/paper) from [ppa](https://launchpad.net/~snwh/+archive/ubuntu/pulp) on Ubuntu for both Gnome and Cinnamon based desktops.
+The paper_icon_theme module installs the [Paper icon theme](https://snwh.org/paper) from [ppa](https://launchpad.net/~snwh/+archive/ubuntu/pulp) on Ubuntu for Cinnamon based desktops.
 
 ## Setup
 
@@ -104,8 +104,7 @@ Before starting your work on this module, you should fork the project to your Gi
 * Changes are located in a topic branch
 * For new functionality, proper tests are written
 * Changes should not solve certain problems on special environments
-* Your change does not handle third party software for which dedicated Puppet modules exist
-  * such as creating databases, installing webserver etc.
+* Your change does not handle third party software for which dedicated Puppet modules exist such as creating databases, installing webserver etc.
 * Changes follow the recommended Puppet style guidelines from the [Puppet Language Style Guide](https://docs.puppet.com/puppet/latest/style_guide.html)
 
 ### Branches

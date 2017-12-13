@@ -23,6 +23,7 @@ class paper_icon_theme (
   class { 'paper_icon_theme::config':
     package_ensure => $package_ensure,
     user           => $user,
+    require        => User[$user],
   }
 
   contain paper_icon_theme::install

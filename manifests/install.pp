@@ -15,5 +15,5 @@ class paper_icon_theme::install (
 
   Apt::Ppa['ppa:snwh/pulp']
     ~> Class['apt::update']
-    -> Package[ 'paper-icon-theme' ]
+    -> Package['paper-icon-theme']
 }

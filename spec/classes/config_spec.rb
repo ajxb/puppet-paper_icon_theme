@@ -7,21 +7,6 @@ describe 'paper_icon_theme::config' do
         facts
       end
 
-      context 'configure paper with defaults' do
-        let :params do
-          {
-            user: 'testuser'
-          }
-        end
-        it do
-          should contain_gnome__gsettings('desktop.interface_icon-theme').with(
-            schema: 'org.gnome.desktop.interface',
-            key:    'icon-theme',
-            value:  '\'Paper\''
-          )
-        end
-      end
-
       context 'configure paper for cinnamon' do
         let :facts do
           facts.merge(
@@ -33,6 +18,7 @@ describe 'paper_icon_theme::config' do
             user: 'testuser'
           }
         end
+
         it do
           should contain_gnome__gsettings('desktop.interface_icon-theme').with(
             schema: 'org.cinnamon.desktop.interface',
@@ -42,24 +28,7 @@ describe 'paper_icon_theme::config' do
         end
       end
 
-      context 'remove paper icon theme with defaults' do
-        let :params do
-          {
-            package_ensure: 'absent',
-            user:           'testuser'
-          }
-        end
-
-        it do
-          should contain_gnome__gsettings('desktop.interface_icon-theme').with(
-            schema: 'org.gnome.desktop.interface',
-            key:    'icon-theme',
-            value:  '\'ubuntu-mono-dark\''
-          )
-        end
-      end
-
-      context 'configure paper for cinnamon' do
+      context 'remove paper on cinnamon' do
         let :facts do
           facts.merge(
             desktop: { type: 'cinnamon' }
@@ -81,6 +50,12 @@ describe 'paper_icon_theme::config' do
       end
 
       context 'user param not set' do
+        let :facts do
+          facts.merge(
+            desktop: { type: 'cinnamon' }
+          )
+        end
+
         it do
           expect do
             subject.call
