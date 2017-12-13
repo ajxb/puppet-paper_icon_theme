@@ -1,0 +1,33 @@
+{
+  "name": "ajxb-paper_icon_theme",
+  "version": "1.0.0",
+  "author": "Adam Butler",
+  "summary": "Install and manage paper icon theme related packages",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ajxb/puppet-paper_icon_theme",
+  "project_page": "https://github.com/ajxb/puppet-paper_icon_theme",
+  "issues_url": "https://github.com/ajxb/puppet-paper_icon_theme/issues",
+  "tags": [
+    "paper-icon-theme"
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/apt","version_requirement":">= 2.3.0 < 5.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.15.0 < 5.0.0"}
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.5.0 < 6.0.0"
+    }
+  ],
+  "description": "Module to manage paper icon theme and related packages on Ubuntu"
+}
